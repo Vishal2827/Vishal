@@ -1,19 +1,21 @@
 pipeline {
     agent any
+
     stages {
         stage('Build') {
             steps {
-                script {
-                    // Your build script here
-                }
+                echo 'Building...'
             }
         }
         stage('Test') {
             steps {
-                script {
-                    // Your test script here
-                }
+                echo 'Testing...'
             }
         }
-    }
-}
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    } // Closing brace for 'stages'
+} // Closing brace for 'pipeline'
